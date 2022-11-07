@@ -1,3 +1,21 @@
 [
-{"link": "/placepot/Epsom/19042022.htm"}
+{"link": "/placepot/Epsom/19042022.htm"},
+{"race": "Race 1", "time": "1:50", "course": "Epsom", "distance": "5f", "runners": "12", "favourite": "1", "placed": "1st", "card_no": "5", "name": "Mokaatil"},
+{"race": "Race 1", "time": "1:50", "course": "Epsom", "distance": "5f", "runners": "12", "favourite": "1", "placed": "2nd", "card_no": "7", "name": "Thegreatestshowman"},
+{"race": "Race 1", "time": "1:50", "course": "Epsom", "distance": "5f", "runners": "12", "favourite": "1", "placed": "3rd", "card_no": "11", "name": "Pettochside"},
+{"race": "Race 2", "time": "2:20", "course": "Epsom", "distance": "1m 2f 17y", "runners": "8", "favourite": "4", "placed": "Fav", "card_no": "Favourite", "name": "1"},
+{"race": "Race 2", "time": "2:20", "course": "Epsom", "distance": "1m 2f 17y", "runners": "8", "favourite": "4", "placed": "Nelson Gay", "card_no": "2", "name": "Newyorkstateofmind"},
+{"race": "Race 2", "time": "2:20", "course": "Epsom", "distance": "1m 2f 17y", "runners": "8", "favourite": "4", "placed": "3", "card_no": "Recon Mission", "name": "4"},
+{"race": "Race 3", "time": "2:55", "course": "Epsom", "distance": "1m 2f 17y", "runners": "8", "favourite": "7", "placed": "Just That Lord", "card_no": "6", "name": "Dark Shot"},
+{"race": "Race 3", "time": "2:55", "course": "Epsom", "distance": "1m 2f 17y", "runners": "8", "favourite": "7", "placed": "8", "card_no": "Ornate", "name": "9"},
+{"race": "Race 3", "time": "2:55", "course": "Epsom", "distance": "1m 2f 17y", "runners": "8", "favourite": "7", "placed": "Lucky Ava", "card_no": "10", "name": "Electric Love"},
+{"race": "Race 4", "time": "3:30", "course": "Epsom", "distance": "1m 4f 6y", "runners": "9", "favourite": "3", "placed": "12", "card_no": "Pop Dancer", "name": "1st"},
+{"race": "Race 4", "time": "3:30", "course": "Epsom", "distance": "1m 4f 6y", "runners": "9", "favourite": "3", "placed": "4", "card_no": "Nahanni\u00a0(F)", "name": "2nd"},
+{"race": "Race 4", "time": "3:30", "course": "Epsom", "distance": "1m 4f 6y", "runners": "9", "favourite": "3", "placed": "1", "card_no": "Grand Alliance", "name": "3rd"},
+{"race": "Race 5", "time": "4:00", "course": "Epsom", "distance": "1m 113y", "runners": "9", "favourite": "7", "placed": "8", "card_no": "Zain Sarinda", "name": "2"},
+{"race": "Race 5", "time": "4:00", "course": "Epsom", "distance": "1m 113y", "runners": "9", "favourite": "7", "placed": "Inverness", "card_no": "3", "name": "Mighty Ulysses"},
+{"race": "Race 5", "time": "4:00", "course": "Epsom", "distance": "1m 113y", "runners": "9", "favourite": "7", "placed": "5", "card_no": "Sheer Rocks", "name": "6"},
+{"race": "Race 6", "time": "4:30", "course": "Epsom", "distance": "1m 113y", "runners": "9", "favourite": "6", "placed": "Teumessias Fox", "card_no": "7", "name": "United Nations"},
+{"race": "Race 6", "time": "4:30", "course": "Epsom", "distance": "1m 113y", "runners": "9", "favourite": "6", "placed": "1st", "card_no": "1", "name": "Soto Sizzler"},
+{"race": "Race 6", "time": "4:30", "course": "Epsom", "distance": "1m 113y", "runners": "9", "favourite": "6", "placed": "2nd", "card_no": "2", "name": "Achelois"}
 ]

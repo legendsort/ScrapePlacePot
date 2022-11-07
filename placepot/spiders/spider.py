@@ -21,16 +21,47 @@ class PlacePotSpider(scrapy.Spider):
         except:
             return False
 
-    def getData(self, response):
-        # race response.css("table tr h2::text").get()
-        # time & course response.css("table tr h2 span.join::text").get() 
-        # distancer, runners, favourite, response.css("table tr td div.row-fluid div.span2 p span::text")
-        # data response.css(".span5 table tbody tr td::text")  
-        yield {
-            "here": "here"
-        }
+    def cut(self, string, head):
+        _, ans = string.split(head)
+        return ans.strip()
+
+    def crawlData(self, response):
+        races = response.css("table tr h2::text").getall()
+        # print("race: ", races)
+        times = response.css("table tr h2 span.join::text").getall()
+        # print("time: ", times)
+        cols = response.css("table tr td div.row-fluid div.span2 p span::text").getall()
+        # print("col: ", cols)
+        rows = response.css(".span5 table.table.table-bordered tbody tr td::text").getall()
+        # print("row: ", rows)
+        p = 0
+        for i in range(0, len(races)):
+            race = races[i][:-3]
+            time, course = times[i].split(' ')
+            distance = self. cut(cols[3*i], 'Distance:')
+            runners = self.cut(cols[3*i+1], 'Runners:')
+            favourite = self.cut(cols[3*i+2], 'Favourite:')
+            visit = False
+            while p < len(rows):
+                placed = rows[p]
+                card_no = rows[p + 1]
+                name = rows[p + 2]
+                if(visit and placed == '1st'): break
+                visit = True
+                p += 3
+                yield {
+                    "race": race,
+                    "time": time,
+                    "course": course,
+                    "distance": distance,
+                    "runners": runners,
+                    "favourite": favourite,
+                    "placed": placed,
+                    "card_no": card_no,
+                    "name": name
+                }
+
     def parse(self, response):
-        print("-=-=-================>")
         for items in response.css('.span10 p'):
             try: 
                 date = self.getDate(items.getall()[0])
@@ -44,9 +75,8 @@ class PlacePotSpider(scrapy.Spider):
                         text = course.css('::text').get()
                         if text == self.course:
                             link = course.attrib['href']
-                            print("=============>", link)
-                            yield response.follow(link, callback=self.getData)
-                            yield {"link": link}
+                            yield response.follow(link, callback=self.crawlData)
+                            yield link
                         pass    
                 pass
             except:
