@@ -1,18 +1,28 @@
 import scrapy
-import datetime
 from dateutil import parser
-import logging
+from scrapy.crawler import CrawlerProcess
+import sys
 
-logging.info("sdfasdfasdf")
+
+# python index.py <start_date> <end_date> <course>
+# i.e. python index.py '19 April 2022' '19 April 2022' Epsom
+# i.e. python index.py '15 April 2022' '21 April 2022' Cork
+
 class PlacePotSpider(scrapy.Spider):
     name = 'placepot'
+    custom_settings = {
+        "FEED_URI": "output.csv",
+        "FEED_FORMAT": "csv",
+    }
     start_urls = ['https://www.scoop6.co.uk/placepot-results/']
+
+    def start_requests(self):
+        yield scrapy.Request('https://www.scoop6.co.uk/placepot-results/')
 
     def __init__(self, st, ed, course):
         self.startDate = parser.parse(st)
         self.endDate = parser.parse(ed)
         self.course = course
-        print(self.startDate, self.endDate)
         pass
 
     def getDate(self, string):
@@ -76,16 +86,15 @@ class PlacePotSpider(scrapy.Spider):
                         text = course.css('::text').get()
                         if text == self.course:
                             link = course.attrib['href']
-                            yield response.follow(link, callback=self.crawlData)
+                            yield scrapy.Request(f"https://www.scoop6.co.uk{link}", callback=self.crawlData, dont_filter=True)
                         pass    
                 pass
             except:
-                yield {"error": "error"}
-            
+                yield {"error": "some error"}
         pass
 
-
-
-
-
+_, startDate, endDate, course = sys.argv
+process = CrawlerProcess()
+process.crawl(PlacePotSpider, st=startDate, ed=endDate, course=course)
+process.start()
 

@@ -1,5 +1,10 @@
 ## COMMAND
-    scrapy crawl placepot -a st=<start date> -a ed=<end date> -a course=<course name> -O <output file name>
+    1. Activate virtual environment.
+        Use this command: ./venv/Scripts/activate
+    2. Go into placepot folder
+        Use this command: cd ./placepot
+    3. Run Scrapy
+        Use this command: scrapy crawl placepot -a st=<start date> -a ed=<end date> -a course=<course name> -O <output file name>
 
     i.e. 
         scrapy crawl placepot -a st='15 April 2022' -a ed='21 April 2022' -a course=Cork -O output.csv
