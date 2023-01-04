@@ -1,19 +1,14 @@
-race,time,course,distance,runners,favourite,placed,card_no,name
-Race 1,1:50,Epsom,5f,12,1,1st,5,Mokaatil
-Race 1,1:50,Epsom,5f,12,1,2nd,7,Thegreatestshowman
-Race 1,1:50,Epsom,5f,12,1,3rd,11,Pettochside
-Race 2,2:20,Epsom,1m 2f 17y,8,4,1st,4,Nahanni (F)
-Race 2,2:20,Epsom,1m 2f 17y,8,4,2nd,1,Grand Alliance
-Race 2,2:20,Epsom,1m 2f 17y,8,4,3rd,8,Zain Sarinda
-Race 3,2:55,Epsom,1m 2f 17y,8,7,1st,1,Soto Sizzler
-Race 3,2:55,Epsom,1m 2f 17y,8,7,2nd,2,Achelois
-Race 3,2:55,Epsom,1m 2f 17y,8,7,3rd,3,Love Is Golden
-Race 4,3:30,Epsom,1m 4f 6y,9,3,1st,3,Going Gone (F)
-Race 4,3:30,Epsom,1m 4f 6y,9,3,2nd,7,Mascat
-Race 4,3:30,Epsom,1m 4f 6y,9,3,3rd,4,Solent Gateway
-Race 5,4:00,Epsom,1m 113y,9,7,1st,2,Blueberry Hill
-Race 5,4:00,Epsom,1m 113y,9,7,2nd,7,Schmilsson (F)
-Race 5,4:00,Epsom,1m 113y,9,7,3rd,4,Later Darling
-Race 6,4:30,Epsom,1m 113y,9,6,1st,2,New Pursuit
-Race 6,4:30,Epsom,1m 113y,9,6,2nd,3,Pub Crawl
-Race 6,4:30,Epsom,1m 113y,9,6,3rd,7,Swilcan Bridge
+date,dividEnd,unit,race,time,course,distance,runners,favourite,placed,card_no,name
+2nd January 2023,71.00,904.20,Race 1,12:45,Ayr,2m 4f 100y,5,5,1st,1,Glen Cannel
+2nd January 2023,71.00,904.20,Race 1,12:45,Ayr,2m 4f 100y,5,5,2nd,5,Saladam (F)
+2nd January 2023,71.00,904.20,Race 2,1:15,Ayr,2m 4f 100y,17,1,1st,7,So Many Roads
+2nd January 2023,71.00,904.20,Race 2,1:15,Ayr,2m 4f 100y,17,1,2nd,14,Euchan Falls
+2nd January 2023,71.00,904.20,Race 2,1:15,Ayr,2m 4f 100y,17,1,3rd,1,Jet Legs (F)
+2nd January 2023,71.00,904.20,Race 2,1:15,Ayr,2m 4f 100y,17,1,4th,5,Blazing Port
+2nd January 2023,71.00,904.20,Race 3,1:45,Ayr,3m 20y,4,1,1st,1,Gold Cup Bailly (F)
+2nd January 2023,71.00,904.20,Race 4,2:15,Ayr,2m 4f 110y,6,1,1st,5,Donna's Double
+2nd January 2023,71.00,904.20,Race 4,2:15,Ayr,2m 4f 110y,6,1,2nd,3,High Moon
+2nd January 2023,71.00,904.20,Race 5,2:45,Ayr,3m 70y,4,4,1st,4,Storm Nelson (F)
+2nd January 2023,71.00,904.20,Race 6,3:15,Ayr,2m,11,6,1st,6,L Anamour (F)
+2nd January 2023,71.00,904.20,Race 6,3:15,Ayr,2m,11,6,2nd,4,Halondo
+2nd January 2023,71.00,904.20,Race 6,3:15,Ayr,2m,11,6,3rd,8,One Mill Harbour

@@ -45,11 +45,24 @@ class PlacePotSpider(scrapy.Spider):
         # print("col: ", cols)
         rows = response.css(".span5 table.table.table-bordered tbody tr td::text").getall()
         # print("row: ", rows)
+
+        raceDateString = response.css(".row-fluid .span10 h1::text").getall()[0]
+        raceDateArray = raceDateString.split(" ")[-3:]
+        raceDate = " ".join(raceDateArray)
+        # print("date----------->", raceDate)
+
+
+        alertString = response.css(".span10 .alert-block p span::text").getall()[0]
+        alertArray = alertString.split(" ")
+
+        dividEnd = alertArray[2][1: ]
+        unit = alertArray[-2]
+        # print(dividEnd, unit)
         p = 0
         for i in range(0, len(races)):
             race = races[i][:-3]
             time, course = times[i].split(' ')
-            distance = self. cut(cols[3*i], 'Distance:')
+            distance = self.cut(cols[3*i], 'Distance:')
             runners = self.cut(cols[3*i+1], 'Runners:')
             favourite = self.cut(cols[3*i+2], 'Favourite:')
             visit = False
@@ -61,6 +74,9 @@ class PlacePotSpider(scrapy.Spider):
                 visit = True
                 p += 3
                 yield {
+                    "date": raceDate,
+                    "dividEnd": dividEnd,
+                    "unit": unit,
                     "race": race,
                     "time": time,
                     "course": course,
